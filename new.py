@@ -1,6 +1,7 @@
 import os
 import hashlib
 from datetime import datetime, timezone, timedelta
+import subprocess
 
 def generate_md5_filename():
     # 現在の日付と時刻（ミリ秒を除いた）を取得
@@ -28,7 +29,7 @@ def create_md_file(directory):
     # フロントマターの内容を作成
     front_matter = f"""+++
 title = '{filename}'
-slug = '{filename}'
+slug = '{filename[:-3]}'
 date = '{current_datetime_jst.isoformat()}'
 type = 'tweet'
 draft = false
@@ -38,7 +39,9 @@ draft = false
     with open(file_path, 'w') as file:
         file.write(front_matter)
 
-    print(f"Markdown file '{filename}' generated successfully in '{directory}'.")
+    # ファイルに書き込む前にリンクを出力
+    print(f"生成されました: {file_path}")
+
 
 if __name__ == "__main__":
     target_directory = "content/tweets/"  # スクリプトの実行ディレクトリからの相対パス
