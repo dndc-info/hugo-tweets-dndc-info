@@ -1,3 +1,28 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://log.dndc.info/'
+languageCode = 'ja-jp'
+title = 'log.dndc.info'
+theme = 'tweets'
+hasCJKLanguage = true
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[services]
+[services.googleAnalytics]
+ID = 'G-TNE3N44JH2'
+
+
+[params]
+icon = "/images/icon.webp"
+
+
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.116.0"
+
+[[params.footer]]
+title = "dndc.info"
+url = "https://dndc.info/"

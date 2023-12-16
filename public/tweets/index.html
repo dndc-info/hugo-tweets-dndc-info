@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Tweets | My New Hugo Site</title>
+
+      <link rel="stylesheet" href="/css/main.min.d0de0ff9b945f2e625ff067322e69d71a57892538ce9b28ae6810d67bb2b3a64.css" integrity="sha256-0N4P&#43;blF8uYl/wZzIuadcaV4klOM6bKK5oENZ7srOmQ=" crossorigin="anonymous">
+
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>My New Hugo Site</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+
+
+<div class="border">
+  <div style="margin-top: 10px;">
+                    <a href="https://www.chil-chil.net/goodsDetail/goods_id/113524/"
+                        style="padding: 12px;border: solid 1px #eee;display: flex;text-decoration: none;color: #000;"
+                        onMouseOver="this.style.opacity='0.9'">
+                        <div style="flex-shrink: 0;">
+                            <img src="/noimage.png" alt=""
+                                width="100" height="100" style="object-fit: contain;" />
+                        </div>
+                        <div style="margin-left: 10px;">
+                            <h2 style="margin: 0;padding-bottom: 13px;border: none;font-size: 16px;"></h2>
+                            <p
+                                style="margin: 0;font-size: 13px;word-break: break-word;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;"></p>
+                        </div>
+                    </a>
+                </div>
+<p>『<a href="https://www.chil-chil.net/goodsDetail/goods_id/113524/">異世界の沙汰は社畜次第</a> 』
+5巻を買いっぱなしで読めずにいたので、1巻から読み返して5巻も読みました。</p>
+<p>社畜の主人公誠一郎と異世界で魔導騎士をやっているアレシュの異世界召喚モノBL…なんですけど、話が普通に面白いです。経理課のやり手中間管理職としてのしのし改革を進めていく主人公のガッツに元気がもらえます。おらも仕事頑張るぞ！みたいな気持ちになれる。今年はもう仕事納めたけど。</p>
+<p>なんか最近の商業BLって、ものによってはふつうのラノベみたいなのもあるよね。たまたま作中で描かれるロマンス部分がBLだったからBLコミックとして出版されてるだけみたいな。
+『異世界の沙汰は社畜次第』に関しては、肝心のBL部分は淡白めかな。BLリハビリ中の私でも恥ずかしがらずにサクッと読めます。でも攻めのアレシュ様がしっかり誠一郎にデレデレになってて、可愛いです。屋敷のメイドさんに混じってあらあら…って見守りたい。年下の攻めからしか得られぬ栄養がある…。</p>
+<p>BLに抵抗がない人なら普通にただの異世界召喚モノとして読んでも面白いと思います。</p>
+
+  <div>
+    <a href="/tweets/884039bf5b26e2a717deb4bb2b28e8f6/">
+      
+      
+      <time datetime="2023-12-14T21:42:26&#43;09:00">2023年12月14日 21:42:26</time>
+    </a>
+  </div>
+</div>
+
+<div class="border">
+  <p>ツイートのテストです。</p>
+<p>ミリ秒まで取得した日付の文字列をMD5という暗号関数で変換して一意のslugを与えています。これによりURLかぶりみたいなものは回避できてると思います。</p>
+<p><code>hugo new</code>ではMD5でファイル名を生成とかできないので、ChatGPTにPythonを書いてもらいました。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> hashlib
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime, timezone, timedelta
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> subprocess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_md5_filename</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 現在の日付と時刻（ミリ秒を除いた）を取得</span>
+</span></span><span style="display:flex;"><span>    current_datetime <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">_%H-%M-%S&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 日付と時刻をMD5ハッシュに変換してファイル名にする</span>
+</span></span><span style="display:flex;"><span>    md5_hash <span style="color:#f92672">=</span> hashlib<span style="color:#f92672">.</span>md5(current_datetime<span style="color:#f92672">.</span>encode())<span style="color:#f92672">.</span>hexdigest()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>md5_hash<span style="color:#e6db74">}</span><span style="color:#e6db74">.md&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_md_file</span>(directory):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ファイル名を生成</span>
+</span></span><span style="display:flex;"><span>    filename <span style="color:#f92672">=</span> generate_md5_filename()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ファイルのパスを作成</span>
+</span></span><span style="display:flex;"><span>    file_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(directory, filename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ディレクトリが存在しない場合は作成する</span>
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>makedirs(directory, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 現在の日付と時刻（ミリ秒を除いた）を取得</span>
+</span></span><span style="display:flex;"><span>    current_datetime <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now(timezone<span style="color:#f92672">.</span>utc)<span style="color:#f92672">.</span>replace(microsecond<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 現地時刻に変換</span>
+</span></span><span style="display:flex;"><span>    jst <span style="color:#f92672">=</span> timezone(timedelta(hours<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>))  <span style="color:#75715e"># 日本時間のタイムゾーン</span>
+</span></span><span style="display:flex;"><span>    current_datetime_jst <span style="color:#f92672">=</span> current_datetime<span style="color:#f92672">.</span>astimezone(jst)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># フロントマターの内容を作成</span>
+</span></span><span style="display:flex;"><span>    front_matter <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;+++
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">title = &#39;</span><span style="color:#e6db74">{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">slug = &#39;</span><span style="color:#e6db74">{</span>filename[:<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">date = &#39;</span><span style="color:#e6db74">{</span>current_datetime_jst<span style="color:#f92672">.</span>isoformat()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">type = &#39;tweet&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">draft = false
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">+++</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ファイルに書き込む</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(file_path, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>        file<span style="color:#f92672">.</span>write(front_matter)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ファイルに書き込む前にリンクを出力</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;生成されました: </span><span style="color:#e6db74">{</span>file_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    target_directory <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;content/tweets/&#34;</span>  <span style="color:#75715e"># スクリプトの実行ディレクトリからの相対パス</span>
+</span></span><span style="display:flex;"><span>    create_md_file(target_directory)
+</span></span></code></pre></div>
+  <div>
+    <a href="/tweets/589276aa94d34fb02a90b161ed42992f/">
+      
+      
+      <time datetime="2023-12-13T22:29:28&#43;09:00">2023年12月13日 22:29:28</time>
+    </a>
+  </div>
+</div>
+
+<div class="border">
+  <p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p>
+<p><img src="bryce-canyon.jpg" alt="Bryce Canyon National Park"></p>
+<p>Sit excepteur do velit veniam mollit in nostrud laboris incididunt ea. Amet eu cillum ut reprehenderit culpa aliquip labore laborum amet sit sit duis. Laborum id proident nostrud dolore laborum reprehenderit quis mollit nulla amet veniam officia id id. Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.</p>
+
+  <div>
+    <a href="/posts/post-3/">
+      
+      
+      <time datetime="2023-03-15T11:00:00&#43;09:00">2023年03月15日 11:00:00</time>
+    </a>
+  </div>
+</div>
+
+<div class="border">
+  <p>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.</p>
+<p>Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.</p>
+
+  <div>
+    <a href="/posts/post-2/">
+      
+      
+      <time datetime="2023-02-15T10:00:00&#43;09:00">2023年02月15日 10:00:00</time>
+    </a>
+  </div>
+</div>
+
+<div class="border">
+  <p>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.</p>
+<p>Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.</p>
+
+  <div>
+    <a href="/posts/post-1/">
+      
+      
+      <time datetime="2023-01-15T09:00:00&#43;09:00">2023年01月15日 09:00:00</time>
+    </a>
+  </div>
+</div>
+
+
+  </main>
+  <footer>
+    <p>Copyright 2023. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

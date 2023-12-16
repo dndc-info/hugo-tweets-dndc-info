@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tweets on My New Hugo Site</title>
+    <link>https://example.org/tweets/</link>
+    <description>Recent content in Tweets on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Dec 2023 21:42:26 +0900</lastBuildDate>
+    <atom:link href="https://example.org/tweets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>884039bf5b26e2a717deb4bb2b28e8f6.md</title>
+      <link>https://example.org/tweets/884039bf5b26e2a717deb4bb2b28e8f6/</link>
+      <pubDate>Thu, 14 Dec 2023 21:42:26 +0900</pubDate>
+      <guid>https://example.org/tweets/884039bf5b26e2a717deb4bb2b28e8f6/</guid>
+      <description>『異世界の沙汰は社畜次第 』 5巻を買いっぱなしで読めずにいたので、1巻から読み返して5巻も読みました。
+社畜の主人公誠一郎と異世界で魔導騎士をやっているアレシュの異世界召喚モノBL…なんですけど、話が普通に面白いです。経理課のやり手中間管理職としてのしのし改革を進めていく主人公のガッツに元気がもらえます。おらも仕事頑張るぞ！みたいな気持ちになれる。今年はもう仕事納めたけど。
+なんか最近の商業BLって、ものによってはふつうのラノベみたいなのもあるよね。たまたま作中で描かれるロマンス部分がBLだったからBLコミックとして出版されてるだけみたいな。 『異世界の沙汰は社畜次第』に関しては、肝心のBL部分は淡白めかな。BLリハビリ中の私でも恥ずかしがらずにサクッと読めます。でも攻めのアレシュ様がしっかり誠一郎にデレデレになってて、可愛いです。屋敷のメイドさんに混じってあらあら…って見守りたい。年下の攻めからしか得られぬ栄養がある…。
+BLに抵抗がない人なら普通にただの異世界召喚モノとして読んでも面白いと思います。</description>
+    </item>
+    <item>
+      <title>589276aa94d34fb02a90b161ed42992f.md</title>
+      <link>https://example.org/tweets/589276aa94d34fb02a90b161ed42992f/</link>
+      <pubDate>Wed, 13 Dec 2023 22:29:28 +0900</pubDate>
+      <guid>https://example.org/tweets/589276aa94d34fb02a90b161ed42992f/</guid>
+      <description>ツイートのテストです。
+ミリ秒まで取得した日付の文字列をMD5という暗号関数で変換して一意のslugを与えています。これによりURLかぶりみたいなものは回避できてると思います。
+hugo newではMD5でファイル名を生成とかできないので、ChatGPTにPythonを書いてもらいました。
+import os import hashlib from datetime import datetime, timezone, timedelta import subprocess def generate_md5_filename(): # 現在の日付と時刻（ミリ秒を除いた）を取得 current_datetime = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H-%M-%S&amp;#34;) # 日付と時刻をMD5ハッシュに変換してファイル名にする md5_hash = hashlib.md5(current_datetime.encode()).hexdigest() return f&amp;#34;{md5_hash}.md&amp;#34; def create_md_file(directory): # ファイル名を生成 filename = generate_md5_filename() # ファイルのパスを作成 file_path = os.path.join(directory, filename) # ディレクトリが存在しない場合は作成する os.makedirs(directory, exist_ok=True) # 現在の日付と時刻（ミリ秒を除いた）を取得 current_datetime = datetime.now(timezone.utc).replace(microsecond=0) # 現地時刻に変換 jst = timezone(timedelta(hours=9)) # 日本時間のタイムゾーン current_datetime_jst = current_datetime.astimezone(jst) # フロントマターの内容を作成 front_matter = f&amp;#34;&amp;#34;&amp;#34;+++ title = &amp;#39;{filename}&amp;#39; slug = &amp;#39;{filename[:-3]}&amp;#39; date = &amp;#39;{current_datetime_jst.</description>
+    </item>
+  </channel>
+</rss>

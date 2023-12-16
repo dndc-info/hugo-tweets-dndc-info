@@ -1,2 +1,7 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<h1 class="flex justify-center mt-4">
+    <a class="inline-block" href="{{ .Site.BaseURL }}">
+        {{ with .Site.Params.icon }}
+        <img src="{{ . }}" width="80" class="rounded-full" alt="{{ site.Title }}">
+        {{ end }}
+    </a>
+</h1>
