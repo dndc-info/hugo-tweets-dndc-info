@@ -16,6 +16,9 @@ ID = 'G-TNE3N44JH2'
 
 [params]
 icon = "/images/icon.webp"
+# OGP設定
+description = "ドンドコのつぶやき倉庫"
+title = "log.dndc.info"
 
 
 [module]
