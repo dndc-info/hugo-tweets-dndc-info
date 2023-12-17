@@ -32,6 +32,7 @@ title = '{filename}'
 slug = '{filename[:-3]}'
 date = '{current_datetime_jst.isoformat()}'
 type = 'tweet'
+tags = ['']
 draft = false
 +++\n\n"""
 
