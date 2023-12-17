@@ -12,7 +12,8 @@ unsafe = true
 [services]
 [services.googleAnalytics]
 ID = 'G-TNE3N44JH2'
-
+  [services.rss]
+    limit = 20
 
 [params]
 icon = "/images/icon.webp"
