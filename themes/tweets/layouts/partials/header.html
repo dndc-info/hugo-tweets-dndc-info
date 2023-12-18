@@ -1,5 +1,7 @@
-<div class="flex flex-row items-center mb-8 px-4 py-2 shadow-md">
-    <a href="{{ .Site.BaseURL }}" class="my-3 mr-3 text-xl items-stretch text-gray-500 border-0 no-underline">{{ site.Title }}</a>
-    <p class="mr-3 text-gray-500">:</p>
-    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-</div>
+<h1 class="flex justify-center mt-8">
+    <a class="inline-block" href="{{ .Site.BaseURL }}/tweets/">
+        {{ with .Site.Params.icon }}
+        <img src="{{ . }}" width="80" class="rounded-full" alt="{{ site.Title }}">
+        {{ end }}
+    </a>
+</h1>
