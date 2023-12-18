@@ -1,0 +1,42 @@
+<form class="flex flex-center w-full mx-auto my-4">
+  <input id="searchKeyword" class="bg-gray-100 w-full max-w-lg px-4 py-2 rounded-full my-4 mx-auto" type="search" size="20" placeholder="Ctrl+Gでフォーカス, Enterで検索">
+  <input id="searchButton" class="hidden" type="submit" value="検索">
+</form>
+
+<script>
+  const SEARCH_URL = '/search/';
+
+  window.addEventListener('DOMContentLoaded', () => {
+      const searchButton = document.getElementById('searchButton');
+      const searchKeyword = document.getElementById('searchKeyword');
+
+      // Enterキーが押されたときに検索ページへジャンプする処理
+      searchKeyword.addEventListener('keyup', event => {
+          if (event.key === 'Enter') {
+              event.preventDefault();  // Prevent default form's behavior
+              const query = searchKeyword.value;
+              const url = query ? SEARCH_URL + '#' + query : SEARCH_URL;
+              location.href = url;
+          }
+      });
+      // 検索ボタンのクリックでも同様の処理を実行
+      searchButton.addEventListener('click', e => {
+          e.preventDefault();  // Prevent default form's behavior
+          const query = searchKeyword.value;
+          const url = query ? SEARCH_URL + '#' + query : SEARCH_URL;
+          location.href = url;
+      });
+      // Ctrl+Gで検索フォームにフォーカス
+      document.addEventListener('keydown', function(event) {
+          // Ctrlキー (または Command キー) + G キーが同時に押された場合
+          if ((event.ctrlKey || event.metaKey) && event.key === 'g') {
+              event.preventDefault(); // ブラウザのデフォルト動作をキャンセル
+              const searchInput = document.querySelector('#searchKeyword');
+              if (searchInput) {
+                  searchInput.focus(); // #searchKeyword の input 要素にフォーカスを設定
+              }
+          }
+      });
+      
+  });
+</script>

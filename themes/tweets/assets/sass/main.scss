@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-white text-gray-500;
+    }
+
+    .blogcard {
+        a {
+            @apply no-underline;
+        }
+    }
+
+    .pagination {
+        ul {
+            @apply flex flex-row justify-center my-8;
+
+            li {
+                a {
+                    @apply border shadow rounded-full py-2 px-4 m-1 bg-white;
+                }
+            }
+            .active {
+                a {
+                    @apply bg-purple-300 text-white;
+                }
+            }
+        }
+    }
+
+}

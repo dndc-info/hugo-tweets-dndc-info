@@ -1,0 +1,5 @@
+<div class="flex flex-row items-center mb-8 px-4 py-2 shadow-md">
+    <a href="{{ .Site.BaseURL }}" class="my-3 mr-3 text-xl items-stretch text-gray-500 border-0 no-underline">{{ site.Title }}</a>
+    <p class="mr-3 text-gray-500">:</p>
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>

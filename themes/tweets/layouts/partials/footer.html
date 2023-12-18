@@ -1,0 +1,3 @@
+{{ range .Site.Params.footer }}
+<small class="block mt-16 mb-2 mx-auto text-center">&copy; {{ now.Year }} <a href="{{ .url }}">{{ .title }}</a><small>
+{{ end }}

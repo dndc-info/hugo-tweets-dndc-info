@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h1 class="text-4xl my-5 mb-12 mx-auto text-center">{{ .Title }}</h1>
+<div class="prose max-w-4xl mx-auto">
+  {{ .Content }}
+
+  <div class="flex flex-col items-left justify-between my-4">
+    {{ range (.Paginate ( last 10 .Pages.ByDate.Reverse )).Pages }}
+    <div class="flex flex-col sm:flex-row sm:items-center sm:mb-4">
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05+09:00" }}
+      {{ $dateHuman := .Date | time.Format "2006-01-02" }}
+      <time class="text-gray-400 text-left mr-4 w-24" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      <h2 class="text-left text-xl mt-2 mb-1 my-0 sm:mt-0 sm:mb-0">
+        <a href="{{ .RelPermalink }}" class="no-underline hover:text-indigo-400">{{ .LinkTitle }}</a>
+      </h2>
+    </div>
+    {{ end }}
+    <div class="pagination">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+</div>
+{{ end }}
